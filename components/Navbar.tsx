@@ -1,6 +1,10 @@
+"use client";
 import Link from "next/link"
+import { useRouter } from "next/navigation";
 const user = {};
+
 const Navbar = () => {
+  const router = useRouter;
   return (
     <header className="navbar">
       <nav>
@@ -14,7 +18,7 @@ const Navbar = () => {
 
         {user && (
           <figure>
-            <button>
+            <button onClick={() => router.push('/profile/1234556')}>
               <img
               src="/assets/images/dummy.jpg"
               alt="User"

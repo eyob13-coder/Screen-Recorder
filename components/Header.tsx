@@ -1,5 +1,6 @@
 import { ICONS } from "@/constants"
 import Link from "next/link"
+import DropdownList from "./DropdownList"
 
 const Header = ({ subHeader, title, userImg}:SharedHeaderProps) => {
   return (
@@ -7,7 +8,7 @@ const Header = ({ subHeader, title, userImg}:SharedHeaderProps) => {
         <section className="header-container">
             <div className="details">
               {userImg && (
-                <img src={userImg || '/assets/images/dummy.jpg'}
+                <img src={userImg}
                 alt="user"
                 height={66}
                 width={66}
@@ -50,7 +51,7 @@ const Header = ({ subHeader, title, userImg}:SharedHeaderProps) => {
                  width={16}
                  height={16}/>
          </div>
-         
+         <DropdownList/>
         </section>
         </header>
   )
