@@ -4,8 +4,8 @@ import Link from 'next/link'
 import React from 'react'
 
 const page = () => {
-  const handleSignIn =async ()=> {
-    return authClient.signIn.social({ provider: 'google'})
+  const handleSignIn = async ()=> {
+    return await authClient.signIn.social({ provider: 'google'})
   }
   return (
     <main className="sign-in">
